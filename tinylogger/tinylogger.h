@@ -125,7 +125,7 @@ namespace tlog {
 
         // Build the progress bar itself. Looks like so:
         // [=================>                         ]
-        int usableWidth = std::max(0, width
+        int usableWidth = (std::max)(0, width
             - 2 // The surrounding [ and ]
             - 1 // Space between progress bar and label
             - (int)label.size() // Label itself
@@ -292,7 +292,7 @@ namespace tlog {
             }
 #endif
 
-            progressBarWidth = std::max(0, progressBarWidth);
+            progressBarWidth = (std::max)(0, progressBarWidth);
 
             writeLine(scope, ESeverity::Progress, progressBar(current, total, duration, progressBarWidth));
         }
